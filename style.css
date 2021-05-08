@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /*link da fonte que pegamos no google fonts*/
+* {
+    box-sizing: border-box; /*vai limitar o tamanho total do conteudo ao tamanho definido pelo usuario*/
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /*nome da familia da fonte que pegamos no google*/
+}
+
+ul {
+    list-style: none;
+}
+
+a { /*links do menu*/
+    text-decoration: none; /*tira toda a estilixação de texto da ancora*/
+    color: inherit; /*tira a cor do link*/
+} 
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 0;
+    background: #EBBC3D;
+    color: white;
+}
+
+header {
+    height: calc(100vh - 150px); /*calculo da visualição total que o usuario tem da tela de altura menos 150px*/
+    background: no-repeat center/cover url("assets/header-image.jpg"); /*inserir uma imagem */
+}
+
+header nav { /*menu de navegação*/
+    display: flex; /*display flex para mover os objetos*/
+    justify-content: space-between; /*espaço entre os conteudos dentro do nav*/
+    margin: auto 30px; /*margem nas laterais*/
+}
+
+header nav p { /*paragrafo(logo temporaria) do nav*/
+    font-weight: bold; /*peso da fonte bold*/
+}
+
+header nav ul { /*lista do nav*/
+    list-style: none; /*remover o estilo da lista*/
+    display: flex; /*display flex já vem com a propriedade inclusa de flex-direction: row;(em linha)*/
+}
+
+header nav ul li { /*item da lista do nav*/
+    margin: 0 15px; /*top/bottom right/left*/
+}
+
+.header-content { /*conteudo do header*/
+    max-width: 400px; /*largura maxima*/
+    margin: 130px auto; /*margem do conteudo do header*/
+    text-align: center;
+}
+
+.header-content h1 { /*titulo do conteudo do header*/
+    margin-bottom: 10px; /*margem de baixo*/
+    font-size: 4rem; /*tamanho da fonte*/
+}
+
+.pacotes {
+    background: #e2e2e2;
+    padding: 15px;
+}
+
+.pacotes .pacotes-cards { /*seção pacotes do site*/
+    display: flex;
+    max-width: 950px; /*largura maxima que os cards podem atingir no total*/
+    margin: auto; /*centralizar os cards na tela*/
+    flex-wrap: wrap; /*quebra a estrtura quando a tela diminui para ter os objetos dentro*/
+    justify-content: center;
+}
+
+.pacotes .pacotes-title {
+    margin: 25px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pacotes .card { /*cards da seção pacotes*/
+    width: 250px;
+    height: 350px;
+    background: white;
+    border-radius: 24px 0px;
+    margin: 25px 25px; /*margem para centralizar na tela*/
+    position: relative; /*Posição relativa para ajustar as tags dentro do card*/
+}
+
+.pacotes .card-image { /*imagem do card*/
+    width: 250px;
+    height: 200px;
+    border-radius: 24px 0 0 0; /*arredondamento da imagem para encaixar no card*/
+    object-fit: cover; /*para preencher com a imagem sem perder a proporção*/
+}
+
+.pacotes .card-content { /*conteudo do card*/
+    padding: 0 15px; /*padding do card para dar espaçamento nas laterais*/
+}
+
+.pacotes .card-content ul { /*lista não ordenada conteudo do card*/
+    display: flex; /*alterar o display para ficar dinâmico*/
+    flex-direction: column; /*colocar os objetos como coluna na vertical*/
+    list-style: none; /*remover o estilo da lista*/
+    padding: 0px; /*remover o padding da lista*/
+}
+
+.pacotes .card-content ul li { /*itens da lista*/
+    font-size: 0.6rem; /*tamanho da fonte do items da lista*/
+    display: flex; /*para alinhar os icones com o texto na horizontal*/
+    align-items: center; /*alinhar os itens ao centro verticalmente*/
+    margin: 3px 0px; /*espaço entre cada item da lista na vertical*/
+    color: gray;
+    font-weight: bold;
+}
+
+.pacotes .card-content li svg { /*icones da lista*/
+    width: 16px; /*largura dos icones*/
+    height: 16px; /*altura dos icones*/ 
+    margin-right: 10px; /*distancia dos icones a direita em relação ao texto*/
+}
+
+.pacotes .card-content h1 { /*titulo do card*/
+    font-size: 1rem; /*tamanho do titulo do conteudo do card*/
+}
+
+.pacotes .card .card-tag-top { /*tag de cima*/
+    position: absolute; /*Posição absolute para alinhar a tag em relação ao card*/
+    right: 0;
+    top: 15px;
+    background: #EE9037;
+    border-radius: 8px 0 0 8px;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag-bottom { /*tag de baixo*/
+    position: absolute; /*Posição absolute para alinhar a tag em relação ao card*/
+    left: 0;
+    top: 160px;
+    background: #223C48;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag p { /*texto das tags*/
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+.servicos { /*seção serviços*/
+    padding: 15px;
+}
+
+.servicos .servicos-title { /*titulo da seção serviços*/
+    text-align: center;
+    margin: 35px 0;
+}
+
+.servicos .servicos-cards { /*box dos cards da seção serviços*/
+    padding-top: 25px; 
+    display: flex;
+    max-width: 950px; /*largura maxima*/
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap; /*quebrar o conteudo quando o tamanho da janela ou da tela diminuir*/
+}
+
+.servicos .card { /*cards de serviço*/
+    width: 250px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /*nesse caso alinha os itens verticalmente porque o flex-direction esta como column*/
+    align-items: center; /* nesse caso alinha os itens horizontalmente pelo mesmo motivo de cima*/
+    margin: 0 20px;
+}
+
+.servicos .card svg { /*icones dos servicos*/
+    width: 60px;
+    height: 60px;
+    margin: 50px 0;
+    transition: all 1s; /*transição da mudança de cor para dar um efeito mais fluido*/
+}
+
+.servicos .card svg:hover { /*aplica a mudança que esta no bloco quando passamos o mouse em cima do objeto*/
+    stroke: #EE9037; /*muda a cor dos traços do svg para laranja*/
+    transform: scale(1.1); /*aumenta o tamanho do icone*/
+}
+
+.servicos .card h3 { /*titulo do card de serviço */
+    font-weight: bold;
+}
+
+.servicos .card p { /*descricao dos servicos de cada card */
+    font-size: 0.8rem;
+    color: gray;
+    text-align: center;
+}
+
+.servicos .card .card-content { /*conteudo dos cards de servico*/
+    height: 180px; /*tamanho da altura da box*/
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+.contato { /*seção contato*/
+    padding: 60px;
+    background: #e2e2e2; 
+    position: relative;
+}
+
+.contato .contato-card {
+    width: 350px;
+    height: 300px;
+    background: white;
+    position: absolute;
+    z-index: 99; /*nivel de prioridade do card por conta da position, para ficar sobre o mapa*/
+
+    border-radius: 8px;
+
+    top: calc(50% - 150px); /*calculo para o posicionamento do card na vertical*/
+    left: calc(20% - 175px); /*calculo para o posicionamento do card na horizontal*/
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28); /*sombra do card*/
+}
+
+.contato .contato-card h1 { /*titulo do card*/
+    text-align: left;
+    padding-left: 50px;
+}
+
+.contato .contato-card li { /*itens da lista do card de contato*/
+    font-size: .8rem;
+    font-weight: bold;
+    color: gray;
+
+    display: flex;
+    align-items: center;
+}
+
+.contato .contato-card svg { /*icones do card de contato*/
+    width: 16px;
+    margin: 10px;
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+
+/*Especial para mapa*/
+@media (max-width: 950px) {
+
+    .contato { /*ocupaçao do mapa*/
+        padding: 60px 0;
+    } 
+
+    .contato .contato-card { /*posicionamente do card na tela*/
+        left: 40px; 
+    }
+}
+
+@media (max-width: 800px) {
+
+    .contato { /*ocupaçao do mapa*/
+        padding: 20px 0; 
+    }
+
+    .contato .contato-card { /*posicionamente do card na tela*/
+        position: static; /*posicao por padrao*/
+        margin: 40px auto;
+    }
+}
+
+
+@media (max-width: 767px) { /*responsivo para uma largura maxima de 767px*/  
+}
+
+
+/*Landscape phones and down*/
+
+@media (max-width: 480px) { /*responsivo para uma largura maxima de 480px*/ 
+    
+    body {
+        margin-bottom: 55px;
+    }
+
+    header nav ul { /*menu do site*/
+        position: fixed; /*posição fixa na tela*/
+        bottom: 0; /*para colocar na parte de baixo*/
+        left: 0; /*para alinhar a esquerda como referencia*/
+        width: 100%; /*ajustar a largura*/
+        padding: 0; /*remover o padding*/
+        margin: 0; /*remover margin*/
+
+        z-index: 99;/*quanto maior o valor maior a prioriadade do objeto*/
+
+        background: #1B55D1; /*background do menu*/
+        color: white; /*cor da fonte do menu*/
+        height: 55px; /*altura do menu*/
+        display: flex;
+        justify-content: space-between; /*espaço entre os objetos*/
+    }
+
+    header nav p { /*logo do menu*/
+        width: 100%; /*tamanho ocupado na tela em 100%*/
+        text-align: center;
+    }
+
+    .contato { /*ocupaçao do mapa*/
+        padding: 20px 0; 
+    }
+
+    .contato .contato-card { /*posicionamente do card na tela*/
+        position: static;
+        margin: 40px auto;
+    }
+}
+
+
+/*
+Portrait tablet to landscape and desktop
+@m
+edia (min-width: 768px) and (max-width: 979px){
+}
+*/
+
+
+/*Large desktop
+@media (min-width: 1200px){
+}
+*/
